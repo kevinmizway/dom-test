@@ -2,6 +2,12 @@ $(document).ready(function() {
   $("button#hello").click(function() {
     $("ul#you").prepend("<li>Hello!</li>");
     $("ul#webpage").prepend("<li>How are you?</li>");
+    $("ul#you").children("li").first().click(function() {
+      $(this).remove();
+    });
+    $("ul#webpage").children("li").first().click(function() {
+      $(this).remove();
+    });
   });
 
   $("button#goodbye").click(function() {
